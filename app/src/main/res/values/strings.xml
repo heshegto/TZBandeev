@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ТЗ Бандеев</string>
+    <string name="main">Главная</string>
+    <string name="favourites">Избранное</string>
+    <string name="account">Аккаунт</string>
+    <string name="more">Подробнее</string>
+</resources>
