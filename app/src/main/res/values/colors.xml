@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="almost_white">#F2F2F3</color>
     <color name="almost_black">#151515</color>
+    <color name="light_grey_text">#8f8f97</color>
     <color name="light_grey">#32333A</color>
     <color name="green">#12B956</color>
     <color name="vk_blue">#2683ED</color>

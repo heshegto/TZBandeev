@@ -4,4 +4,6 @@
     <string name="favourites">Избранное</string>
     <string name="account">Аккаунт</string>
     <string name="more">Подробнее</string>
+    <string name="search_courses">Поиск курсов...</string>
+    <string name="sort_by_date">По дате добавления</string>
 </resources>

@@ -8,4 +8,6 @@
     <string name="no_acc">Нет аккаунта?</string>
     <string name="sign_up">Регистрация</string>
     <string name="forgot_pass">Забыли пароль?</string>
+    <string name="vk_description">Переход на страницу ВК</string>
+    <string name="ok_description">Переход на страницу Однокласники</string>
 </resources>

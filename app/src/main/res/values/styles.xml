@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="App.ActiveElement">
+        <item name="android:layout_height">@dimen/active_element_height</item>
+        <item name="android:textSize">@dimen/active_element_text_size</item>
+        <item name="android:background">@drawable/rounded_corners</item>
+    </style>
+
+    <style name="App.ActiveElement.ImageButton"/>
+
+    <style name="App.ActiveElement.Button">
+        <item name="android:layout_width">@dimen/zero</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:insetBottom">@dimen/zero</item>
+        <item name="android:insetTop">@dimen/zero</item>
+    </style>
+
+    <style name="App.ActiveElement.EditText">
+        <item name="android:layout_width">@dimen/zero</item>
+        <item name="android:backgroundTint">?attr/colorSecondary</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:paddingStart">@dimen/normal_gap</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:textColorHint">?attr/colorOnSecondary</item>
+    </style>
+
+    <!-- Text views -->
+    <style name="App.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="App.TextView.Title">
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:textFontWeight">400</item>
+    </style>
+
+    <style name="App.TextView.MediumText">
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="App.TextView.SmallText">
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MakeFavouriteButton">
+        <item name="android:layout_width">@dimen/bigger_gap</item>
+        <item name="android:layout_height">@dimen/bigger_gap</item>
+        <item name="android:layout_marginTop">@dimen/small_gap</item>
+        <item name="android:layout_marginEnd">@dimen/small_gap</item>
+        <item name="android:background">@drawable/bg_transperent_rounded_corners</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="App.TextView.SmallText.FramedText">
+        <item name="android:background">@drawable/bg_transperent_rounded_corners</item>
+        <item name="android:paddingHorizontal">@dimen/small_gap</item>
+        <item name="android:paddingVertical">@dimen/space_gap</item>
+    </style>
+</resources>
