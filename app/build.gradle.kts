@@ -1,3 +1,5 @@
+import org.gradle.kotlin.dsl.dependencies
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -38,6 +40,12 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:product_item"))
+    implementation(project(":core:ui"))
+    implementation(project(":feature:auth"))
+    implementation(project(":feature:all_courses"))
+    implementation(project(":feature:favourite_courses"))
+    implementation(project(":feature:account_management"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -47,6 +55,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("com.squareup.retrofit2:retrofit:3.0.0")
-    implementation("com.squareup.retrofit2:converter-gson:3.0.0")
 }

@@ -4,8 +4,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import com.bandeev.tz.account.AccountFragment
+import com.bandeev.account_management.AccountFragment
 import com.google.android.material.navigation.NavigationBarView
+import com.bandeev.all_courses.presentation.AllCoursesFragment
+import com.bandeev.favourite_courses.FavouritesFragment
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstancesBundle: Bundle?) {
@@ -16,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         bottomNavMenu.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.BM_main -> {
-                    setNewFragment(MainFragment())
+                    setNewFragment(AllCoursesFragment())
                     true
                 }
                 R.id.BM_favourites -> {

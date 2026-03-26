@@ -21,4 +21,11 @@ dependencyResolutionManagement {
 
 rootProject.name = "TZ Bandeev"
 include(":app")
- 
+include(":core")
+include(":core:ui")
+include(":core:product_item")
+include(":feature")
+include(":feature:auth")
+include(":feature:all_courses")
+include(":feature:favourite_courses")
+include(":feature:account_management")
