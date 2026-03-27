@@ -1,12 +1,9 @@
 package com.bandeev.feature.auth.domain.usecases
 
-import android.content.Context
-import android.content.Intent
-import android.net.Uri
+import com.bandeev.feature.auth.domain.repositories.AuthNavigator
 
 class AuthWithOKUseCase {
-    fun execute(context: Context){
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://ok.ru"))
-        context.startActivity(intent)
+    fun execute(navigator: AuthNavigator){
+        navigator.openUrl("https://ok.ru")
     }
 }

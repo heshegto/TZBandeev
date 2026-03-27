@@ -5,6 +5,14 @@ import com.bandeev.feature.auth.domain.repositories.LogInViaEmail
 
 class LogInUseCase {
     fun execute(logInClass: LogInViaEmail, data: LogInViaEmailData){
-        logInClass.logIn(data)
+        if (data.isValid()) {
+            if (logInClass.logIn(data)) {
+                logInClass.ifLogInSucceed()
+            } else {
+                logInClass.ifLogInFailed()
+            }
+        } else {
+            logInClass.ifDataIsInvalid()
+        }
     }
 }

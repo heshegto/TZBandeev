@@ -10,4 +10,6 @@
     <string name="forgot_pass">Забыли пароль?</string>
     <string name="vk_description">Переход на страницу ВК</string>
     <string name="ok_description">Переход на страницу Однокласники</string>
+    <string name="invalid_log_in_data">Данные для входа неправильного формата</string>
+    <string name="wrong_log_in_data">Email или пароль не верны. Проверьте их и повторите позже</string>
 </resources>

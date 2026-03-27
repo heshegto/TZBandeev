@@ -11,13 +11,11 @@ import com.bandeev.feature.auth.R
 import androidx.activity.viewModels
 import com.bandeev.feature.auth.domain.models.LogInViaEmailData
 
-
 class LogInActivity : AppCompatActivity(R.layout.login_layout) {
     private val viewModel: LogInViewModel by viewModels()
+    private val btnLogin by lazy { findViewById<Button>(R.id.button_logIn) }
     private val etEmail by lazy { findViewById<EditText>(R.id.edit_email) }
     private val etPassword by lazy { findViewById<EditText>(R.id.edit_password) }
-    private val btnLogin by lazy { findViewById<Button>(R.id.button_logIn) }
-    lateinit var logInDataState: LogInViaEmailData
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,46 +24,30 @@ class LogInActivity : AppCompatActivity(R.layout.login_layout) {
         val btnOK = findViewById<ImageButton>(R.id.imButton_ok)
         val btnSignUp = findViewById<TextView>(R.id.tv_signUp)
         val btnForgotPassword = findViewById<TextView>(R.id.tv_forgotPass)
+
+        btnLogin.setOnClickListener { viewModel.clickLogIn() }
         btnVK.setOnClickListener { viewModel.clickAuthVK() }
         btnOK.setOnClickListener { viewModel.clickAuthOK() }
         btnSignUp.setOnClickListener { viewModel.clickSignUp() }
         btnForgotPassword.setOnClickListener { viewModel.clickForgotPassword() }
 
+        recoverUIState()
         updateUIState()
         etEmail.doAfterTextChanged { updateUIState() }
         etPassword.doAfterTextChanged { updateUIState() }
-        btnLogin.setOnClickListener { viewModel.clickLogIn(logInDataState) }
     }
 
-    override fun onResume(){
-        super.onResume()
-        recoverUIState()
-    }
-    override fun onPause(){
-        super.onPause()
-        saveUIState()
+    private fun recoverUIState(){
+        viewModel.logInActivityDataState?.let {
+            etEmail.setText(it.email)
+            etPassword.setText(it.password)
+        }
     }
 
     private fun updateUIState() {
         val email = etEmail.text.toString().trim()
         val password = etPassword.text.toString()
-        logInDataState = LogInViaEmailData(email, password)
-        btnLogin.isEnabled = logInDataState.isValid()
-    }
-
-    private fun recoverUIState() {
-        val data = viewModel.logInActivityDataState
-        data?.let {
-            etEmail.setText(data.logInDataState.email)
-            etPassword.setText(data.logInDataState.password)
-            btnLogin.isEnabled = data.btnLogInIsEnabledState
-        }
-    }
-
-    private fun saveUIState(){
-        viewModel.logInActivityDataState = LogInActivityViewState(
-            logInDataState,
-            btnLogin.isEnabled
-        )
+        viewModel.logInActivityDataState = LogInViaEmailData(email, password)
+        btnLogin.isEnabled = viewModel.logInActivityDataState!!.isValid()
     }
 }
