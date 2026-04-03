@@ -1,6 +1,4 @@
-<resources
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.TZBandeev" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
@@ -20,8 +18,11 @@
         <!-- Font -->
         <item name="fontFamily">@font/roboto</item>
         <!-- Status bar and background color. -->
-        <item name="android:background">@color/dark</item>
+        <item name="android:windowBackground">@color/dark</item>
         <item name="android:statusBarColor">@color/dark</item>
+        <!-- Color of selected text (first) and it's handlers (second) -->
+        <item name="android:textColorHighlight">@color/green</item>
+        <item name="colorControlActivated">@color/green</item>
     </style>
 
     <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">

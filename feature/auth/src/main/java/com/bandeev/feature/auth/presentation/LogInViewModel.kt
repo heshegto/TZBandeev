@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import com.bandeev.feature.auth.data.repository.AuthNavigatorImpl
 import com.bandeev.feature.auth.data.repository.LogInViaEmailImpl
+import com.bandeev.feature.auth.data.repository.MyToastImpl
 import com.bandeev.feature.auth.domain.models.LogInViaEmailData
 import com.bandeev.feature.auth.domain.usecases.AuthWithOKUseCase
 import com.bandeev.feature.auth.domain.usecases.AuthWithVKUseCase
@@ -22,11 +23,11 @@ class LogInViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun clickSignUp() {
-        SignUpUseCase().execute()
+        SignUpUseCase().execute(MyToastImpl(getApplication()))
     }
 
     fun clickForgotPassword() {
-        ForgotPasswordUseCase().execute()
+        ForgotPasswordUseCase().execute(MyToastImpl(getApplication()))
     }
 
     fun clickAuthVK() {
