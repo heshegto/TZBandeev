@@ -92,10 +92,10 @@
 
                     <TextView
                         android:id="@+id/tv_title"
-                        android:maxLines="1"
-                        android:ellipsize="end"
-                        android:textAlignment="textStart"
                         style="@style/App.TextView.TitleMediumText"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAlignment="textStart"
                         tools:text="Title example" />
                 </TableRow>
 
@@ -129,7 +129,7 @@
                     <TextView
                         android:id="@+id/tv_more"
                         style="@style/App.TextView.BodySmallText"
-                        android:gravity="center|right"
+                        android:gravity="center|end"
                         android:text="@string/more"
                         android:textAlignment="center"
                         android:textColor="@color/green"

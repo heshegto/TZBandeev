@@ -2,7 +2,6 @@ package com.bandeev.feature.auth.data.repository
 
 import android.content.Context
 import android.content.Intent
-import android.widget.Toast
 import com.bandeev.feature.auth.R
 import com.bandeev.feature.auth.domain.models.LogInResult
 import com.bandeev.feature.auth.domain.models.LogInViaEmailData
@@ -21,18 +20,10 @@ class LogInViaEmailImpl(val context: Context) : LogInViaEmail {
     }
 
     override fun ifLogInFailed() {
-        Toast.makeText(
-            context,
-            context.getString(R.string.wrong_log_in_data),
-            Toast.LENGTH_SHORT
-        ).show()
+        MyToastImpl(context).doToast(context.getString(R.string.wrong_log_in_data))
     }
 
     override fun ifDataIsInvalid() {
-        Toast.makeText(
-            context,
-            context.getString(R.string.invalid_log_in_data),
-            Toast.LENGTH_SHORT
-        ).show()
+        MyToastImpl(context).doToast(context.getString(R.string.invalid_log_in_data))
     }
 }
