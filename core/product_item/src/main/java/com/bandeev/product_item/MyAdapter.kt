@@ -3,7 +3,7 @@ package com.bandeev.product_item
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-
+import com.bandeev.product_item.models.ProductCard
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Locale
@@ -14,11 +14,9 @@ class MyAdapter (var dataSet: List<ProductCard>) : RecyclerView.Adapter<MyViewHo
         Locale.getDefault()
     )
 
-
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
             .inflate(R.layout.product_item, viewGroup, false)
-
         return MyViewHolder(view)
     }
 

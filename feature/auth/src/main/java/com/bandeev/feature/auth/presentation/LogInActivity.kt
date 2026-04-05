@@ -8,11 +8,11 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import com.bandeev.feature.auth.R
-import androidx.activity.viewModels
 import com.bandeev.feature.auth.domain.models.LogInViaEmailData
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LogInActivity : AppCompatActivity(R.layout.login_layout) {
-    private val viewModel: LogInViewModel by viewModels()
+    private val viewModel: LogInViewModel by viewModel()
     private val btnLogin by lazy { findViewById<Button>(R.id.button_logIn) }
     private val etEmail by lazy { findViewById<EditText>(R.id.edit_email) }
     private val etPassword by lazy { findViewById<EditText>(R.id.edit_password) }

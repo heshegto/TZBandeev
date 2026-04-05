@@ -3,8 +3,8 @@ package com.bandeev.feature.auth.domain.usecases
 import android.util.Log
 import com.bandeev.feature.auth.domain.repositories.MyToast
 
-class SignUpUseCase {
-    fun execute(myToast: MyToast){
+class SignUpUseCase(val myToast: MyToast) {
+    fun execute(){
         Log.d("login","Кнопка регистрации нажата")
         myToast.doToast("Кнопка регистрации нажата")
     }

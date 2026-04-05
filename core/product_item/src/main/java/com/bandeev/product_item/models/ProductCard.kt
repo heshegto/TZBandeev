@@ -1,4 +1,4 @@
-package com.bandeev.product_item
+package com.bandeev.product_item.models
 
 data class ProductCard (
     val id: Int,

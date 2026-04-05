@@ -1,6 +1,6 @@
 package com.bandeev.all_courses.data
 
-import com.bandeev.product_item.ProductList
+import com.bandeev.product_item.models.ProductList
 import retrofit2.http.GET
 import retrofit2.http.Query
 
