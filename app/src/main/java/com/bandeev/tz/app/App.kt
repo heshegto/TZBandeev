@@ -1,9 +1,7 @@
-package com.bandeev.feature.auth.app
+package com.bandeev.tz.app
 
 import android.app.Application
-import com.bandeev.feature.auth.di.dataModule
-import com.bandeev.feature.auth.di.domainModule
-import com.bandeev.feature.auth.di.presentationModule
+import com.bandeev.feature.auth.di.authModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -15,7 +13,7 @@ class App: Application() {
         startKoin {
             androidLogger(Level.DEBUG)
             androidContext(this@App)
-            modules(listOf(presentationModule, domainModule, dataModule))
+            modules(authModule)
         }
     }
 }

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,13 +7,13 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="@dimen/element_width"
-        android:layout_height="@dimen/card_height"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/normal_gap"
-        app:cardCornerRadius="@dimen/corner_radius"
+        app:cardCornerRadius="@dimen/normal_gap"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,16 +26,12 @@
 
                 <ImageView
                     android:id="@+id/top_section_image"
-                    android:layout_width="@dimen/zero"
-                    android:layout_height="@dimen/zero"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:adjustViewBounds="false"
                     android:contentDescription="@null"
                     android:cropToPadding="false"
                     android:scaleType="centerCrop"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@color/white" />
 
                 <ImageButton
@@ -63,7 +58,7 @@
                     android:layout_marginBottom="@dimen/small_gap"
                     app:drawableStartCompat="@drawable/star_fill"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/top_section_image"
+                    app:layout_constraintStart_toStartOf="parent"
                     tools:text="5.0" />
 
                 <TextView
@@ -73,58 +68,46 @@
                     app:layout_constraintBottom_toBottomOf="@+id/tv_rate"
                     app:layout_constraintStart_toEndOf="@+id/tv_rate"
                     app:layout_constraintTop_toTopOf="@+id/tv_rate"
-                    tools:text="28 марта 1999" />
+                    tools:text="28 mart 1999" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TableLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/dark_grey"
-                android:padding="14dp"
-                android:shrinkColumns="0">
+                android:background="?attr/colorSurface"
+                android:orientation="vertical"
+                android:padding="@dimen/normal_gap">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:background="@color/dark_grey"
-                    android:layout_height="18dp"
-                    android:layout_marginBottom="12dp">
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/App.TextView.TitleMediumText"
+                    android:layout_marginBottom="@dimen/gap_between_title_and_text"
+                    android:textAlignment="textStart"
+                    tools:text="Title example" />
 
-                    <TextView
-                        android:id="@+id/tv_title"
-                        style="@style/App.TextView.TitleMediumText"
-                        android:ellipsize="end"
-                        android:maxLines="1"
-                        android:textAlignment="textStart"
-                        tools:text="Title example" />
-                </TableRow>
-
-                <TableRow
+                <TextView
+                    android:id="@+id/tv_description"
+                    style="@style/App.TextView.BodySmallText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="6dp">
+                    android:minHeight="@dimen/biggest_gap"
+                    android:layout_marginBottom="@dimen/gap_between_text_and_price"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textAlignment="textStart"
+                    android:textStyle="normal"
+                    tools:text="Description example " />
 
-                    <TextView
-                        android:id="@+id/tv_description"
-                        style="@style/App.TextView.BodySmallText"
-                        android:layout_width="match_parent"
-                        android:layout_height="32dp"
-                        android:ellipsize="end"
-                        android:maxLines="2"
-                        android:textAlignment="textStart"
-                        android:textStyle="normal"
-                        tools:text="Description example " />
-                </TableRow>
-
-                <TableRow
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="47dp">
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/tv_price"
                         style="@style/App.TextView.TitleMediumText"
                         android:layout_weight="1"
-                        tools:text="9999 р" />
+                        tools:text="9999 $" />
 
                     <TextView
                         android:id="@+id/tv_more"
@@ -132,11 +115,10 @@
                         android:gravity="center|end"
                         android:text="@string/more"
                         android:textAlignment="center"
-                        android:textColor="@color/green"
+                        android:textColor="?attr/colorOnSurfaceVariant"
                         app:drawableEndCompat="@drawable/arrow_right_short_fill" />
-
-                </TableRow>
-            </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

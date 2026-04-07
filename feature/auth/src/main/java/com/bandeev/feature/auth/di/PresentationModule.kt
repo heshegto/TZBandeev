@@ -4,7 +4,7 @@ import com.bandeev.feature.auth.presentation.LogInViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
-val presentationModule = module {
+internal val presentationModule = module {
     viewModel<LogInViewModel> {
         LogInViewModel(
             application = get(),

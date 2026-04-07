@@ -8,7 +8,7 @@ import com.bandeev.feature.auth.domain.repositories.LogInViaEmail
 import com.bandeev.feature.auth.domain.repositories.MyToast
 import org.koin.dsl.module
 
-val dataModule = module {
+internal val dataModule = module {
     single<LogInViaEmail> { LogInViaEmailImpl(context = get()) }
     single<AuthNavigator> { AuthNavigatorImpl(context = get()) }
     single<MyToast> { MyToastImpl(context = get()) }

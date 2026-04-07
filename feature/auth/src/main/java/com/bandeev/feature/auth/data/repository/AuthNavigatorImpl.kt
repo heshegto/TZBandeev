@@ -16,8 +16,9 @@ class AuthNavigatorImpl(val context: Context) : AuthNavigator {
         try {
             context.startActivity(intent)
         } catch (e: Exception) {
-            MyToastImpl(context).doToast(context.getString(R.string.browser_error))
-            Log.d("login", "${context.getString(R.string.browser_error)}. Error: ${e.message}")
+            val text = context.getString(R.string.browser_error)
+            MyToastImpl(context).doToast(text)
+            Log.d("login", "${text}. Error: ${e.message}")
         }
     }
 }

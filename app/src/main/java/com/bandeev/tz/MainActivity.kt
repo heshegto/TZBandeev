@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         if (savedInstancesBundle == null) {
             bottomNavMenu.selectedItemId = R.id.BM_main
         }
+
     }
 
     private fun setNewFragment(fragment: Fragment) {
