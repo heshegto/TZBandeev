@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/Theme.TZBandeev">
-
 
     <LinearLayout
         android:id="@+id/search_and_filter"
@@ -22,8 +22,10 @@
             style="@style/App.ActiveElement.EditText"
             android:layout_width="264dp"
             android:layout_height="56dp"
-            android:hint="@string/search_courses"
-            android:drawableStart="@drawable/search"/>
+            android:drawableStart="@drawable/search"
+            android:drawablePadding="@dimen/space_gap"
+            android:drawableTint="@color/white"
+            android:hint="@string/search_courses" />
 
         <ImageButton
             android:id="@+id/filter"
@@ -43,7 +45,8 @@
         android:layout_marginTop="16dp"
         android:text="@string/sort_by_date"
         android:textColor="@color/green"
-        app:drawableEndCompat="@drawable/arrow_up_down"
+        android:drawableEnd="@drawable/arrow_up_down"
+        android:drawablePadding="@dimen/space_gap"
         app:layout_constraintEnd_toEndOf="@id/search_and_filter"
         app:layout_constraintTop_toBottomOf="@id/search_and_filter" />
 

@@ -9,7 +9,6 @@ import com.google.android.material.navigation.NavigationBarView
 import com.bandeev.all_courses.presentation.AllCoursesFragment
 import com.bandeev.favourite_courses.FavouritesFragment
 
-
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstancesBundle: Bundle?) {
         super.onCreate(savedInstancesBundle)
@@ -36,7 +35,6 @@ class MainActivity : AppCompatActivity() {
         if (savedInstancesBundle == null) {
             bottomNavMenu.selectedItemId = R.id.BM_main
         }
-
     }
 
     private fun setNewFragment(fragment: Fragment) {

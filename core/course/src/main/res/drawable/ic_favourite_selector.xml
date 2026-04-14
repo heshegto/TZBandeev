@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Иконка для активного состояния (выбрано) -->
+    <item android:state_selected="true" android:drawable="@drawable/bookmark_filled_green" />
+    <!-- Иконка по умолчанию (не выбрано) -->
+    <item android:drawable="@drawable/bookmark" />
+</selector>

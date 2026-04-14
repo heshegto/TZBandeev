@@ -40,7 +40,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:product_item"))
+    implementation(project(":core:course"))
     implementation(project(":core:ui"))
     implementation(project(":feature:auth"))
     implementation(project(":feature:all_courses"))
@@ -55,9 +55,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
     // Koin
-    val koinVersion = "3.5.6"
-    implementation ("io.insert-koin:koin-core:$koinVersion")
-    implementation("io.insert-koin:koin-android:$koinVersion")
-    testImplementation("io.insert-koin:koin-test:$koinVersion")
+    implementation (libs.koin.core)
+    implementation(libs.koin.android)
+    testImplementation(libs.koin.test)
 }

@@ -19,9 +19,8 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavMenu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="80dp"
-        android:background="@color/dark_grey"
+        android:layout_height="@dimen/menu_heigh"
+        android:background="?attr/colorSurface"
         app:elevation="@dimen/zero"
         android:fitsSystemWindows="true"
         app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
