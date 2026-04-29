@@ -1,10 +1,10 @@
 package com.bandeev.domain.usecases
 
-import com.bandeev.domain.models.Course
-import com.bandeev.domain.repository.CourseStorage
+import com.bandeev.domain.models.CourseList
+import com.bandeev.domain.repository.CourseLocalStorage
 
-class GetFavouriteUseCase(val courseStorage: CourseStorage) {
-    fun execute(): List<Course> {
-        return courseStorage.readAll()
+class GetFavouriteUseCase(val localStorage: CourseLocalStorage) {
+    fun execute(): CourseList {
+        return localStorage.readAll()
     }
 }

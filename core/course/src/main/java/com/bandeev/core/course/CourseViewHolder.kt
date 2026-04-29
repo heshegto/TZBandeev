@@ -1,4 +1,4 @@
-package com.bandeev.course
+package com.bandeev.core.course
 
 import android.view.View
 import android.widget.ImageButton

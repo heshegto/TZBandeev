@@ -1,4 +1,4 @@
-package com.bandeev.course
+package com.bandeev.core.course
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -11,8 +11,8 @@ import java.util.Locale
 
 class CourseAdapter(
     var dataSet: CourseList,
-    private val onMoreClick: (Course) -> Unit,
-    private val onFavouriteClick: (Course) -> Unit
+    val onMoreClick: (Course) -> Unit,
+    val onFavouriteClick: (Course) -> Unit
 ) : RecyclerView.Adapter<CourseViewHolder>() {
 
     private val formatter = DateTimeFormatter.ofPattern(
@@ -27,21 +27,20 @@ class CourseAdapter(
     }
 
     override fun onBindViewHolder(viewHolder: CourseViewHolder, position: Int) {
-        val product = dataSet.courses[position]
-        viewHolder.title.text = product.title
-        viewHolder.text.text = product.text
-        viewHolder.price.text = product.price
-        viewHolder.rate.text = product.rate
-        viewHolder.startDate.text = LocalDate.parse(product.startDate).format(formatter)
-        viewHolder.publishDate = LocalDate.parse(product.publishDate)
-        viewHolder.id = product.id
-        viewHolder.btnFavourite.isSelected = product.hasLike
+        val course = dataSet.courses[position]
+        viewHolder.title.text = course.title
+        viewHolder.text.text = course.text
+        viewHolder.price.text = course.price
+        viewHolder.rate.text = course.rate
+        viewHolder.startDate.text = LocalDate.parse(course.startDate).format(formatter)
+        viewHolder.publishDate = LocalDate.parse(course.publishDate)
+        viewHolder.id = course.id
+        viewHolder.btnFavourite.isSelected = course.hasLike
 
-        viewHolder.tvMore.setOnClickListener { onMoreClick(product) }
+        viewHolder.tvMore.setOnClickListener { onMoreClick(course) }
         viewHolder.btnFavourite.setOnClickListener {
-            val newState = !it.isSelected
-            it.isSelected = newState
-            onFavouriteClick(product.copy(hasLike = newState))
+            it.isSelected = !it.isSelected
+            onFavouriteClick(course)
         }
     }
 

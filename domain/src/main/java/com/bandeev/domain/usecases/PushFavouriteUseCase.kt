@@ -1,22 +1,25 @@
 package com.bandeev.domain.usecases
 
+import android.util.Log
 import com.bandeev.domain.models.Course
-import com.bandeev.domain.repository.CourseStorage
+import com.bandeev.domain.repository.CourseLocalStorage
 
-class PushFavouriteUseCase(val courseStorage: CourseStorage) {
-    fun execute(course: Course) {
-        if (course.hasLike) {
+class PushFavouriteUseCase(val localStorage: CourseLocalStorage) {
+    suspend fun execute(course: Course) {
+        if ((course.hasLike) and (localStorage.contains(course))) {
             delete(course)
-        } else {
+        } else if (!(course.hasLike) and !(localStorage.contains(course))) {
             add(course)
+        } else {
+            Log.d("PushFavouriteUseCase", "Something went wrong")
         }
     }
 
-    private fun add(course: Course) {
-        courseStorage.add(course)
+    private suspend fun add(course: Course) {
+        localStorage.add(course)
     }
-    private fun delete(course: Course) {
-        courseStorage.delete(course)
+    private suspend fun delete(course: Course) {
+        localStorage.delete(course)
     }
 
 }

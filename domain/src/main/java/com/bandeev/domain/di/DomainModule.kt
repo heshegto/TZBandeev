@@ -8,7 +8,7 @@ import org.koin.dsl.module
 
 val domainModule = module {
     factory<GetAllCoursesUseCase> { GetAllCoursesUseCase(coursesFromNet = get()) }
-    factory<GetFavouriteIdsUseCase> { GetFavouriteIdsUseCase(courseStorage = get()) }
-    factory<GetFavouriteUseCase> { GetFavouriteUseCase(courseStorage = get()) }
-    factory<PushFavouriteUseCase> { PushFavouriteUseCase(courseStorage = get()) }
+    factory<GetFavouriteIdsUseCase> { GetFavouriteIdsUseCase(localStorage = get()) }
+    factory<GetFavouriteUseCase> { GetFavouriteUseCase(localStorage = get()) }
+    factory<PushFavouriteUseCase> { PushFavouriteUseCase(localStorage = get()) }
 }
