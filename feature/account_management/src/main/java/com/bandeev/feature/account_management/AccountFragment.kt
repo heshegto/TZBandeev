@@ -1,4 +1,4 @@
-package com.bandeev.account_management
+package com.bandeev.feature.account_management
 
 import android.content.Intent
 import android.os.Bundle

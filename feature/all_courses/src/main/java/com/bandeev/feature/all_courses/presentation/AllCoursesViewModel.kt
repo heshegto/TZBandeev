@@ -1,4 +1,4 @@
-package com.bandeev.all_courses.presentation
+package com.bandeev.feature.all_courses.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

@@ -1,4 +1,4 @@
-package com.bandeev.favourite_courses
+package com.bandeev.feature.favourite_courses
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

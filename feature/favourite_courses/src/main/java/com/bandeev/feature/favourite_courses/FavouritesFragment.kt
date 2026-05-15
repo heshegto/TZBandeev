@@ -1,4 +1,4 @@
-package com.bandeev.favourite_courses
+package com.bandeev.feature.favourite_courses
 
 import android.os.Bundle
 import android.view.View

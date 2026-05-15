@@ -5,13 +5,13 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import com.bandeev.account_management.AccountFragment
-import com.google.android.material.navigation.NavigationBarView
-import com.bandeev.all_courses.presentation.AllCoursesFragment
 import com.bandeev.domain.models.Course
 import com.bandeev.domain.repository.CourseDetailsNavigator
-import com.bandeev.favourite_courses.FavouritesFragment
+import com.bandeev.feature.account_management.AccountFragment
+import com.bandeev.feature.all_courses.presentation.AllCoursesFragment
+import com.bandeev.feature.favourite_courses.FavouritesFragment
 import com.bandeev.tz.navigation.CourseDetailsNavigatorImpl
+import com.google.android.material.navigation.NavigationBarView
 import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity(), CourseDetailsNavigator {
@@ -31,14 +31,17 @@ class MainActivity : AppCompatActivity(), CourseDetailsNavigator {
                     setNewFragment(AllCoursesFragment())
                     true
                 }
+
                 R.id.BM_favourites -> {
                     setNewFragment(FavouritesFragment())
                     true
                 }
+
                 R.id.BM_account -> {
                     setNewFragment(AccountFragment())
                     true
                 }
+
                 else -> false
             }
         }
@@ -52,10 +55,12 @@ class MainActivity : AppCompatActivity(), CourseDetailsNavigator {
         ft.replace(R.id.mainFrame, fragment)
         ft.commit()
     }
+
     override fun onDestroy() {
         navigator.unbind()
         super.onDestroy()
     }
+
     override fun navigateToCourseDetails(course: Course) {
         Toast.makeText(this, "Navigate to course details", Toast.LENGTH_SHORT).show()
     }

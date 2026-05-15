@@ -1,7 +1,7 @@
 package com.bandeev.tz.app
 
 import android.app.Application
-import com.bandeev.all_courses.di.allCoursesModule
+import com.bandeev.feature.all_courses.di.allCoursesModule
 import com.bandeev.core.course.di.courseModule
 import com.bandeev.data.di.dataModule
 import com.bandeev.domain.di.domainModule

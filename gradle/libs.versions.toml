@@ -73,3 +73,6 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp"}
+# Conventioanl plugins
+custom-base = { id = "com.bandeev.plugins.custom.base" }
+custom-standard = { id = "com.bandeev.plugins.custom.standard" }

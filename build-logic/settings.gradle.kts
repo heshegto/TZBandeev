@@ -11,24 +11,19 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
     }
+
+    versionCatalogs {
+        create("libs") {
+            from(files("../gradle/libs.versions.toml"))
+        }
+    }
 }
 
-rootProject.name = "TZ Bandeev"
-includeBuild("build-logic")
-include(":app")
-include(":core")
-include(":core:ui")
-include(":core:course")
-include(":feature")
-include(":feature:auth")
-include(":feature:all_courses")
-include(":feature:favourite_courses")
-include(":feature:account_management")
-include(":domain")
-include(":data")
+include(":conventions")

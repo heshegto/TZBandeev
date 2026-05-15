@@ -1,4 +1,4 @@
-package com.bandeev.all_courses.presentation
+package com.bandeev.feature.all_courses.presentation
 
 import android.os.Bundle
 import android.view.View
@@ -8,9 +8,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bandeev.all_courses.R
 import com.bandeev.core.course.CourseAdapter
 import com.bandeev.domain.models.Course
+import com.bandeev.feature.all_courses.R
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
