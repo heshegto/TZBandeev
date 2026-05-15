@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity(), CourseDetailsNavigator {
         ft.commit()
     }
     override fun onDestroy() {
-        // Обязательно отвязываем, чтобы не было утечек памяти
         navigator.unbind()
         super.onDestroy()
     }

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.bandeev.course"
+    namespace = "com.bandeev.core.course"
     compileSdk {
         version = release(36)
     }
@@ -37,10 +37,18 @@ android {
 dependencies {
     implementation(project(":domain"))
     implementation(project(":core:ui"))
+    // Base
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
+    // Test
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    // Layout
+    implementation(libs.androidx.cardview)
+    // Koin
+    implementation (libs.koin.core)
+    implementation(libs.koin.android)
+    testImplementation(libs.koin.test)
 }

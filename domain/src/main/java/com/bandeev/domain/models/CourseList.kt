@@ -6,7 +6,7 @@ package com.bandeev.domain.models
  * @property courses List of courses
  */
 data class CourseList(
-    private val courses: List<Course>
+    val courses: List<Course>
 ) {
     companion object {
         fun getEmpty(): CourseList {

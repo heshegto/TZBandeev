@@ -6,7 +6,6 @@ import com.bandeev.domain.models.Course
 import com.bandeev.domain.models.CourseList
 import com.bandeev.domain.repository.CourseLocalStorage
 
-
 class CourseLocalStorageImpl(context: Context): CourseLocalStorage {
     private val db = Room.databaseBuilder(
         context,
