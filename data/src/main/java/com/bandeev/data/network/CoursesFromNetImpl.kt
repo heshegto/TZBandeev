@@ -1,5 +1,6 @@
 package com.bandeev.data.network
 
+import com.bandeev.data.BuildConfig
 import com.bandeev.domain.models.CourseList
 import com.bandeev.domain.repository.CoursesFromNet
 import kotlinx.coroutines.Dispatchers
@@ -8,14 +9,17 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class CoursesFromNetImpl: CoursesFromNet {
-    val retrofit: Retrofit = Retrofit.Builder()
-        .baseUrl("https://drive.usercontent.google.com")
+    private val retrofit: Retrofit = Retrofit.Builder()
+        .baseUrl(BuildConfig.BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
-    val productApi: ProductApi = retrofit.create(ProductApi::class.java)
+
+    private val productApi: ProductApi = retrofit.create(ProductApi::class.java)
+
     override suspend fun getAllCourses(): CourseList {
         return withContext(Dispatchers.IO) {
-            productApi.getProducts("15arTK7XT2b7Yv4BJsmDctA4Hg-BbS8-q", "download")
+            // Передаем только относительный путь, Retrofit сам приклеит его к baseUrl
+            productApi.getCourses(BuildConfig.PATH_URL)
         }
     }
 }
