@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.custom.standard)
+    alias(libs.plugins.custom.library)
 }
 
 dependencies {

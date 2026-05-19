@@ -13,9 +13,13 @@ gradlePlugin {
             id = libs.plugins.custom.base.get().pluginId
             implementationClass = "BaseModuleConventionPlugin"
         }
-        register("standardModule") {
-            id = libs.plugins.custom.standard.get().pluginId
-            implementationClass = "StandardModuleConventionPlugin"
+        register("libraryModule") {
+            id = libs.plugins.custom.library.get().pluginId
+            implementationClass = "LibraryModuleConventionPlugin"
+        }
+        register("appModule") {
+            id = libs.plugins.custom.app.get().pluginId
+            implementationClass = "AppModuleConventionPlugin"
         }
     }
 }

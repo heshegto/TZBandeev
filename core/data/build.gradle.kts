@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.custom.standard)
+    alias(libs.plugins.custom.library)
     alias(libs.plugins.ksp)
 }
 
@@ -22,7 +22,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":domain"))
+    implementation(project(":core:domain"))
     // Room
     implementation(libs.room.runtime)
     ksp(libs.room.compiler)

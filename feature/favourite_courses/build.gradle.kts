@@ -1,9 +1,9 @@
 plugins {
-    alias(libs.plugins.custom.standard)
+    alias(libs.plugins.custom.library)
 }
 
 dependencies {
-    implementation(project(":domain"))
-    implementation(project(":core:course"))
     implementation(project(":core:ui"))
+    implementation(project(":core:domain"))
+    implementation(project(":core:course"))
 }
