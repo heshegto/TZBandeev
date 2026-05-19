@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.custom.app)
 }
 android {
+    namespace = "com.bandeev.tz"
     defaultConfig {
         applicationId = "com.bandeev.tz"
         minSdk = libs.versions.minSdk.get().toInt()

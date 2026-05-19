@@ -8,7 +8,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bandeev.core.course.CourseAdapter
-import com.bandeev.domain.models.Course
+import com.bandeev.core.domain.models.Course
 import kotlinx.coroutines.launch
 import kotlin.getValue
 import org.koin.androidx.viewmodel.ext.android.viewModel

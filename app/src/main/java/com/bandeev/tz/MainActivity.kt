@@ -5,8 +5,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import com.bandeev.domain.models.Course
-import com.bandeev.domain.repository.CourseDetailsNavigator
+import com.bandeev.core.domain.models.Course
+import com.bandeev.core.domain.repository.CourseDetailsNavigator
 import com.bandeev.feature.account_management.AccountFragment
 import com.bandeev.feature.all_courses.presentation.AllCoursesFragment
 import com.bandeev.feature.favourite_courses.FavouritesFragment

@@ -3,8 +3,8 @@ package com.bandeev.core.course
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bandeev.domain.models.Course
-import com.bandeev.domain.models.CourseList
+import com.bandeev.core.domain.models.Course
+import com.bandeev.core.domain.models.CourseList
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Locale

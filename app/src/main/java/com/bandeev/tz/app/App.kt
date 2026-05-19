@@ -3,8 +3,8 @@ package com.bandeev.tz.app
 import android.app.Application
 import com.bandeev.feature.all_courses.di.allCoursesModule
 import com.bandeev.core.course.di.courseModule
-import com.bandeev.data.di.dataModule
-import com.bandeev.domain.di.domainModule
+import com.bandeev.core.data.di.dataModule
+import com.bandeev.core.domain.di.domainModule
 import com.bandeev.feature.auth.di.authModule
 import com.bandeev.tz.di.mainModule
 import org.koin.android.ext.koin.androidContext

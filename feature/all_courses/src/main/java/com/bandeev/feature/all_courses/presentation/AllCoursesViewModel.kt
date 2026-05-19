@@ -2,11 +2,11 @@ package com.bandeev.feature.all_courses.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.bandeev.domain.models.Course
-import com.bandeev.domain.models.CourseList
-import com.bandeev.domain.repository.CoursesFromNet
-import com.bandeev.domain.repository.CourseDetailsNavigator
-import com.bandeev.domain.usecases.PushFavouriteUseCase
+import com.bandeev.core.domain.models.Course
+import com.bandeev.core.domain.models.CourseList
+import com.bandeev.core.domain.repository.CoursesFromNet
+import com.bandeev.core.domain.repository.CourseDetailsNavigator
+import com.bandeev.core.domain.usecases.PushFavouriteUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

@@ -9,7 +9,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bandeev.core.course.CourseAdapter
-import com.bandeev.domain.models.Course
+import com.bandeev.core.domain.models.Course
 import com.bandeev.feature.all_courses.R
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject

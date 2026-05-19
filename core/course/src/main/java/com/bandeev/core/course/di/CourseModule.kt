@@ -1,8 +1,8 @@
 package com.bandeev.core.course.di
 
 import com.bandeev.core.course.CourseAdapter
-import com.bandeev.domain.models.Course
-import com.bandeev.domain.models.CourseList
+import com.bandeev.core.domain.models.Course
+import com.bandeev.core.domain.models.CourseList
 import org.koin.dsl.module
 
 val courseModule = module {

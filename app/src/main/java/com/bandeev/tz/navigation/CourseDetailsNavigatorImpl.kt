@@ -1,7 +1,7 @@
 package com.bandeev.tz.navigation
 
-import com.bandeev.domain.models.Course
-import com.bandeev.domain.repository.CourseDetailsNavigator
+import com.bandeev.core.domain.models.Course
+import com.bandeev.core.domain.repository.CourseDetailsNavigator
 
 class CourseDetailsNavigatorImpl : CourseDetailsNavigator {
     private var navigationAction: ((Course) -> Unit)? = null
